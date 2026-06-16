@@ -388,7 +388,7 @@
 
     .bar-row {
       display: grid;
-      grid-template-columns: 160px 1fr 120px;
+      grid-template-columns: 140px 1fr 150px;
       gap: 14px;
       align-items: center;
       color: var(--muted);
@@ -432,6 +432,26 @@
       font-size: clamp(32px, 3.4vw, 48px);
       line-height: 1.08;
       letter-spacing: -.035em;
+    }
+
+    .chart-note {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .market-kpis {
+      margin-top: 22px;
+    }
+
+    .market-kpis .stat-card {
+      padding: 28px 22px;
+    }
+
+    .market-kpis .stat-number {
+      font-size: clamp(32px, 3.7vw, 50px);
+      line-height: 1.08;
     }
 
     .requirements {
@@ -833,8 +853,8 @@
       <div class="section-head">
         <div>
           <p class="section-kicker">01 / Market Problem</p>
-          <h2>利用できていない人が、まだ1,000万人以上いる</h2>
-          <p class="section-note"><span class="line">国内障がい者総数と</span><span class="line">福祉サービス利用者数の差は、</span><span class="line">そのまま地域の未充足ニーズです。</span><span class="line">ここに参入余地があります。</span></p>
+          <h2>拡大を続ける障害福祉サービス市場</h2>
+          <p class="section-note"><span class="line">国内障がい者総数と</span><span class="line">福祉サービス利用者数の差は、</span><span class="line">そのまま地域の未充足ニーズです。</span><span class="line">公的支出も拡大傾向にあり、</span><span class="line">ここに参入余地があります。</span></p>
         </div>
       </div>
       <div class="grid two">
@@ -850,37 +870,61 @@
       <div class="card market-visual" style="margin-top: 22px;">
         <div class="market-text">
           <div class="big-message">
-            <strong><span class="line">まだ届いていない。</span><span class="line">だから、今つくる価値がある。</span></strong>
-            <p>Number of people using disability welfare services</p>
+            <strong><span class="line">まだ届いていない。</span><span class="line">でも、公的支出は伸び続けている。</span></strong>
+            <p>障害福祉サービスへの公的支出は拡大を続けています。その中で、就労継続支援B型は「働く場」を必要とする人に届く重要な選択肢です。</p>
           </div>
-          <div class="bar-chart" aria-label="障害保健福祉予算額の推移">
+          <div class="bar-chart" aria-label="障害福祉サービス全体に関する予算の推移">
             <div class="bar-row">
-              <span>令和3年度予算額</span>
-              <div class="bar"><span style="width: 94.9%;"></span></div>
-              <span>2兆2,351億円</span>
+              <span>令和3年度</span>
+              <div class="bar"><span style="width: 78.7%;"></span></div>
+              <span>約2兆2,351億円</span>
             </div>
             <div class="bar-row">
-              <span>令和4年度予算案</span>
+              <span>令和4年度</span>
+              <div class="bar"><span style="width: 82.8%;"></span></div>
+              <span>約2兆3,538億円</span>
+            </div>
+            <div class="bar-row">
+              <span>令和5年度</span>
+              <div class="bar"><span style="width: 94.8%;"></span></div>
+              <span>約2兆6,951億円</span>
+            </div>
+            <div class="bar-row">
+              <span>令和6年度</span>
               <div class="bar"><span style="width: 100%;"></span></div>
-              <span>2兆3,538億円</span>
+              <span>約2兆8,416億円</span>
             </div>
           </div>
+          <p class="chart-note">※障害福祉サービス全体に関する予算であり、就労継続支援B型単体の予算ではありません。</p>
           <div class="grid two" style="margin-top: 22px;">
             <div class="card budget-card">
-              <span class="stat-number">+1,187億円</span>
-              <span class="stat-label">予算増加額</span>
+              <span class="stat-number">+6,065億円</span>
+              <span class="stat-label">令和3年度から令和6年度の増加額</span>
             </div>
             <div class="card budget-card">
-              <span class="stat-number">+5.3%</span>
-              <span class="stat-label">予算増加率</span>
+              <span class="stat-number">+27.1%</span>
+              <span class="stat-label">令和3年度比の伸び</span>
             </div>
           </div>
         </div>
         <div class="photo market-photo" role="img" aria-label="事業計画資料をイメージした写真"></div>
       </div>
-      <div class="card stat-card" style="margin-top: 22px;">
-        <span class="stat-number">約4兆円</span>
-        <span class="stat-label"><span class="line">障がい福祉事業全体の</span><span class="line">市場規模</span></span>
+      <div class="grid three market-kpis">
+        <div class="card stat-card">
+          <span class="stat-number">502,992人</span>
+          <span class="stat-label"><span class="line">就労継続支援B型の</span><span class="line">利用実人員</span></span>
+          <span class="stat-sub">令和6年9月中</span>
+        </div>
+        <div class="card stat-card">
+          <span class="stat-number">17,973</span>
+          <span class="stat-label"><span class="line">就労継続支援B型の</span><span class="line">事業所数</span></span>
+          <span class="stat-sub">令和6年社会福祉施設等調査</span>
+        </div>
+        <div class="card stat-card">
+          <span class="stat-number">約4兆円</span>
+          <span class="stat-label"><span class="line">障がい福祉事業全体の</span><span class="line">市場規模</span></span>
+          <span class="stat-sub">B型を含む障害福祉サービス全体</span>
+        </div>
       </div>
     </section>
 
@@ -1135,7 +1179,7 @@
         <h2>今、地域に必要な事業をつくる</h2>
         <p><span class="line">未充足のニーズがあり、</span><span class="line">制度に基づく収益モデルがあり、</span><span class="line">立ち上げ後の支援もある。</span><span class="line">就労継続支援B型は、</span><span class="line">次に本気で検討すべき事業です。</span></p>
         <a class="button" href="#top">先頭に戻る</a>
-      </div>
+      </div>
     </section>
   </main>
 </body>
