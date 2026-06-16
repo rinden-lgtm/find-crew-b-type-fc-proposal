@@ -23,7 +23,6 @@
 
     * { box-sizing: border-box; }
     html {
-      scroll-behavior: smooth;
       overflow-x: hidden;
     }
 
@@ -857,10 +856,8 @@
 
       .hero,
       .toc,
-      main,
-      section {
+      main {
         max-width: 100vw;
-        overflow-x: hidden;
       }
 
       .page,
@@ -1065,7 +1062,7 @@
     <div class="page">
       <strong>目次</strong>
       <a href="#market">市場環境</a>
-      <a href="#value">事業の魅力</a>
+      <a href="#business-value">事業の魅力</a>
       <a href="#simulation">収支計画</a>
       <a href="#requirements">開設基準</a>
       <a href="#support">支援体制</a>
@@ -1154,7 +1151,7 @@
       </div>
     </section>
 
-    <section id="value">
+    <section id="business-value">
       <div class="section-head">
         <div>
           <p class="section-kicker">02 / Business Value</p>
@@ -1460,5 +1457,31 @@
       </div>
     </section>
   </main>
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    document.addEventListener('click', function (event) {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+
+      const target = document.querySelector(hash);
+      if (!target) return;
+
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState(null, '', hash);
+    });
+
+    window.addEventListener('load', function () {
+      if (!location.hash) {
+        window.scrollTo(0, 0);
+      }
+    }, { once: true });
+  </script>
 </body>
 </html>
