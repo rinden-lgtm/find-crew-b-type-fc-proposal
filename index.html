@@ -87,19 +87,52 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      justify-content: center;
       font-weight: 800;
-      letter-spacing: .04em;
+      text-decoration: none;
     }
 
-    .brand-mark {
+    .brand-logo {
       display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      box-shadow: 0 12px 36px rgba(0, 0, 0, .24);
+      justify-items: center;
+      gap: 5px;
+      padding: 8px 12px 7px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .16);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, .18);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand-symbol {
+      width: 58px;
+      height: 32px;
+      overflow: visible;
+      filter: drop-shadow(0 5px 12px rgba(0, 0, 0, .18));
+    }
+
+    .brand-symbol .ship-line {
+      fill: none;
+      stroke: rgba(255, 255, 255, .94);
+      stroke-width: 3.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .brand-symbol .ship-accent {
+      fill: none;
+      stroke: #58b8ff;
+      stroke-width: 3.4;
+      stroke-linecap: round;
+    }
+
+    .brand-name {
+      color: #63baff;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .34em;
+      line-height: 1;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, .22);
     }
 
     .tag {
@@ -820,7 +853,18 @@
   <header class="hero" id="top">
     <div class="hero-inner">
       <div class="topbar">
-        <div class="brand"><span class="brand-mark">FC</span>Find Crew</div>
+        <div class="brand" aria-label="Find Crew">
+          <div class="brand-logo" aria-hidden="true">
+            <svg class="brand-symbol" viewBox="0 0 96 54" focusable="false">
+              <path class="ship-line" d="M34 14h16v8h9v9" />
+              <path class="ship-line" d="M39 8h8v6" />
+              <path class="ship-line" d="M31 31h37l-8 10H38c-6 0-12-3-16-8l9-2Z" />
+              <path class="ship-line" d="M21 43c7 4 14 4 21 0 7 4 14 4 21 0" />
+              <path class="ship-accent" d="M29 48c7 3 13 3 20 0" />
+            </svg>
+            <span class="brand-name">FIND CREW</span>
+          </div>
+        </div>
         <div class="tag">社内確認用 提案資料</div>
       </div>
       <p class="eyebrow">Employment Continuation Support Type B Franchise</p>
