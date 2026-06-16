@@ -152,13 +152,17 @@
     }
 
     .eyebrow {
-      display: inline-block;
+      display: block;
+      max-width: 100%;
       margin: 0 0 20px;
       color: #bfe0ff;
       font-size: 14px;
       font-weight: 800;
       letter-spacing: .2em;
+      line-height: 1.75;
       text-transform: uppercase;
+      overflow-wrap: anywhere;
+      word-break: normal;
     }
 
     h1, h2, h3, p { margin-top: 0; }
@@ -907,9 +911,23 @@
       }
 
       .eyebrow {
-        font-size: 12px;
-        letter-spacing: .16em;
-        line-height: 1.9;
+        font-size: 11px;
+        letter-spacing: .1em;
+        line-height: 1.8;
+      }
+
+      .eyebrow .line {
+        display: inline-block;
+      }
+
+      .lead {
+        line-height: 1.95;
+        overflow-wrap: anywhere;
+        word-break: normal;
+      }
+
+      .lead .line {
+        display: inline;
       }
 
       h1 {
@@ -1046,7 +1064,7 @@
         </div>
         <div class="tag">社内確認用 提案資料</div>
       </div>
-      <p class="eyebrow">Employment Continuation Support Type B Franchise</p>
+      <p class="eyebrow"><span class="line">Employment Continuation Support</span><span class="line">Type B Franchise</span></p>
       <h1><span class="line">就労継続支援B型</span><span class="line">フランチャイズ</span></h1>
       <p class="lead">
         <span class="line">福祉サービスを必要としながら、</span><span class="line">まだ支援につながれていない人がいます。</span><span class="line">伸び続ける市場で、</span><span class="line">社会貢献と収益性を両立する</span><span class="line">事業提案です。</span>
